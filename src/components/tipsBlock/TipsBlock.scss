@@ -1,0 +1,122 @@
+@import '../../assets/styles/global/_mixins.scss';
+@import '../../assets/styles/global/_colors.scss';
+
+#_tips-block {
+    position: relative;
+    padding: 60px 0 75px;
+  
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+  
+    &:before {
+      bottom: 150px;
+      left: 0;
+      @include background-image("../../images/tips-left.svg");
+      height: 157px;
+      width: 66px;
+    }
+  
+    &:after {
+      top: 121px;
+      right: 0;
+      @include background-image("../../images/tips-right.svg");
+      height: 191px;
+      width: 73px;
+    }
+  
+    #_tips-block-title {
+      font-family: "Montserrat SemiBold", sans-serif;
+      margin: 0 0 62px 0;
+    }
+  
+    .figure-wrapper {
+      position: relative;
+      margin: 0 auto;
+      max-width: 488px;
+  
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: inherit;
+      }
+  
+      &:before {
+        bottom: 40px;
+        @include background-image("../../images/dots-left.svg");
+        height: 157px;
+        width: 66px;
+      }
+  
+      &:after {
+        top: 60px;
+        right: 0;
+        @include background-image("../../images/dots-right.svg");
+        height: 191px;
+        width: 73px;
+      }
+  
+      figure {
+        position: relative;
+        max-width: 349px;
+        margin: 0 auto;
+        box-shadow: 0px 3px 6px #0047CE33;
+        border-radius: 10px;
+        margin: 0 auto 90px;
+        overflow: hidden;
+    
+        .img-wrapper {
+          
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+    
+        figcaption {
+          background-color: #FFFFFF;
+    
+          p {
+            font-family: "Montserrat SemiBold", sans-serif;
+            font-size: 16px;
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+  
+    .btn-wrapper {
+  
+      .sign-up-btn {
+        font-size: 18px;
+        padding: 14px 30px;
+        border-radius: 25px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+
+    #_tips-block {
+      padding: 45px 0 75px;
+  
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      .figure-wrapper:before,
+      .figure-wrapper:after {
+        display: none;
+      }
+
+      #_tips-block-title {
+        font-size: 23px;
+        margin: 0 0 45px 0;
+      }
+    }
+  }

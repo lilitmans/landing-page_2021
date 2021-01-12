@@ -1,0 +1,110 @@
+@import '../../assets/styles/global/_mixins.scss';
+@import '../../assets/styles/global/_colors.scss';
+
+#_educational-benefits-block {
+    position: relative;
+    background-color: #F5FAFE;
+    padding: 75px 0 90px 0;
+  
+    .floating-icons {
+      position: absolute;
+    }
+  
+    #_atomic-energy-icon {
+      left: 10px;
+      top: 188px;
+    }
+  
+    #_venn-diagram-icon {
+      right: 100px;
+      top: 61px;
+    }
+  
+    #_function-icon {
+      left: 277px;
+      bottom: 13px;
+    }
+  
+    #_math-icon {
+      right: 4px;
+      bottom: 113px;
+    }
+  
+    #_educational-benefits-title {
+      margin: 0 0 90px 0;
+    }
+  
+    .benefits-blocks {
+      display: flex;
+      box-sizing: border-box;
+  
+      .benefits-block {
+        position: relative;
+        padding: 45px 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 6px #0037A033;
+        border-radius: 10px;
+        margin: 0 46px 0 0;
+        width: 30%;
+        box-sizing: border-box;
+  
+        &:nth-child(3n) {
+          margin: 0;
+        }
+  
+        .benefit-img {
+          position: absolute;
+          top: -35px;
+          left: 30px;
+        }
+  
+        .benefit-title {
+          font-family: "Montserrat SemiBold", sans-serif;
+          font-size: 20px;
+          margin: 0 0 15px;
+          text-align: left;
+        }
+  
+        .benefit-txt {
+          font-size: 16px;
+        }
+  
+      }
+    }
+  }
+
+  
+@media screen and (max-width: 991px) {
+
+
+  #_educational-benefits-block {
+    padding: 45px 0 60px 0;
+
+    #_educational-benefits-title {
+      margin: 0 0 75px 0;
+    }
+
+    .floating-icons {
+      display: none;
+    }
+
+    .benefits-blocks {
+      flex-direction: column;
+
+      .benefits-block {
+        width: 100%;
+        margin: 0 0 70px;
+        padding: 45px 20px 20px;
+
+        .benefit-title {
+          font-size: 16px;
+        }
+
+        .benefit-txt {
+            font-size: 14px;
+        }
+      }
+    }
+  }
+}
+

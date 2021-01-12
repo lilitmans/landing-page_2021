@@ -1,0 +1,37 @@
+#_intro-block {
+    #_customizable-templates-heading {
+      padding: 32px 0 60px;
+    }
+    
+    #_intro-text {
+        position: relative;
+        text-align: center;
+        padding: 45px 0 25px;
+      
+        &:after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 3px;
+          width: 120px;
+          background-color: #6C63FF;
+          margin: 0 auto;
+        }
+      }
+}
+
+@media screen and (max-width: 991px) {
+  #_intro-block {
+    
+    #_customizable-templates-heading {
+      padding: 30px 0 45px;
+    }
+
+    #_intro-text {
+      padding: 45px 0 20px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@mixin content-wrapper($width) {
+    position: relative;
+    max-width: $width;
+    min-width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+@mixin background-image($url) {
+    background : {
+        image: url($url);
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
+}
+
+@mixin button($bgColor, $txtColor) {
+    background-color: $bgColor;
+    color: $txtColor;
+    font-family: "Monsterrat Medium", sans-serif;
+    border-radius: 25px;
+    text-transform: uppercase;
+    width: auto;
+}
+
+@mixin title {
+    font-family: "Montserrat Bold", sans-serif;
+    color: $heading-color;
+    text-align: center;
+    margin: 0;
+  }

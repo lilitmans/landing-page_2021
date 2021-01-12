@@ -1,0 +1,47 @@
+@import '../../assets/styles/global/_mixins.scss';
+@import '../../assets/styles/global/_colors.scss';
+
+#_create-edit-download-block {
+    position: relative;
+    @include background-image("../../images/create-edit-download-bg.svg");
+    padding: 45px 0 60px;
+  
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: inherit;
+      height: 235px;
+    }
+  
+    &:before {
+      left: 0;
+      top: 0;
+      width: 249px;
+      @include background-image("../../images/create-edit-download-left-image.png");
+    }
+  
+    &:after {
+      right: 0;
+      bottom: 0;
+      width: 221px;
+      @include background-image("../../images/create-edit-download-right-image.png");
+    }
+  
+    #_create-edit-download-title {
+      max-width: 522px;
+      margin: 0 auto 45px;
+    }
+  
+  }
+
+  @media screen and (max-width: 991px) {
+
+    #_create-edit-download-block {
+  
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }

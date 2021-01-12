@@ -1,0 +1,87 @@
+@import '../../assets/styles/global/_mixins.scss';
+@import '../../assets/styles/global/_colors.scss';
+
+.loop-animation-block {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+
+    .loop-animation-title {
+        font-family: "Montserrat SemiBold", sans-serif;
+        color: #FFFFFF;
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+
+    .loop-animation-wrapper {
+        min-width: 100%;
+        width: 200%;
+        height: 50px;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        display: flex;
+        padding: 11px 0;
+        justify-content: space-around;
+        animation: loopAnimation 15s linear infinite;
+    }
+
+    @keyframes loopAnimation {
+        100% {
+            transform: translateX(-900px);
+        }
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        height: 50px;
+        width: 188px;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    &:before {
+        left: 0;
+        @include background-image("../../images/shadow-left.svg");
+    }
+
+    &:after {
+        right: 0;
+        @include background-image("../../images/shadow-right.svg");
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .loop-animation-block {
+
+        .loop-animation-wrapper {
+            width: 400%;
+        }
+
+        img {
+        
+            &:last-child {
+                margin: 0 0 0 20px;
+            }
+        }
+    
+        @keyframes loopAnimation {
+            100% {
+                transform: translateX(calc(-100vw * 2));
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .loop-animation-block {
+
+        .loop-animation-wrapper {
+            width: 500%;
+        }
+    }
+}
